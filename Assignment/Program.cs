@@ -40,6 +40,7 @@
     {
         static void Main()
         {
+            System.Console.WriteLine("Hello World");
             /*
             const int Min = 0;
             const int Max = 10;
@@ -58,7 +59,7 @@
             // Verify original and replicated array are the same
             for (int index = 0; index < size; ++index)
                 Console.WriteLine($"Original {original[index],-PrintOffset}  {copy[index],4} Copy");
-            */
-        }
-    }
+            */   
 }
+    }
+    }
