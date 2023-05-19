@@ -19,7 +19,13 @@
         /// <returns>The user input as an integer</returns>
         public static int AskForNumber(string text)
         {
-            throw new NotImplementedException();
+            Console.Write(text);
+            string userInput = Console.ReadLine();
+            int number = Convert.ToInt32(userInput);
+            Console.Write(number);
+            return number;
+
+
         }
 
         /// <summary>
@@ -40,7 +46,7 @@
     {
         static void Main()
         {
-            System.Console.WriteLine("Hello World");
+            ArrayReplicator.AskForNumber("Test :");
             /*
             const int Min = 0;
             const int Max = 10;
@@ -59,7 +65,7 @@
             // Verify original and replicated array are the same
             for (int index = 0; index < size; ++index)
                 Console.WriteLine($"Original {original[index],-PrintOffset}  {copy[index],4} Copy");
-            */   
+            */
+        }
+    }
 }
-    }
-    }
