@@ -38,7 +38,13 @@
         /// <returns>The user input as an integer</returns>
         public static int AskForNumberInRange(string text, int min, int max)
         {
-            throw new NotImplementedException();
+
+            int userInput = AskForNumber(text);
+            while (userInput < min || userInput > max)
+            {
+                userInput = AskForNumber("Your previous input is not  vaild, try again. ");
+            }
+            return userInput;
         }
     }
 
@@ -46,7 +52,7 @@
     {
         static void Main()
         {
-            ArrayReplicator.AskForNumber("Test :");
+            ArrayReplicator.AskForNumberInRange("Test :", 1, 10);
             /*
             const int Min = 0;
             const int Max = 10;
