@@ -24,8 +24,6 @@
             int number = Convert.ToInt32(userInput);
             Console.Write(number);
             return number;
-
-
         }
 
         /// <summary>
@@ -47,7 +45,6 @@
             return userInput;
         }
     }
-
     static class Program
     {
         static void Main()
