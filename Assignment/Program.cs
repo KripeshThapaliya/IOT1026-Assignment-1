@@ -15,8 +15,7 @@
             {
                 copyArray[i] = original[i];
             }
-
-            return original;
+            return copyArray;
         }
 
         /// <summary>
@@ -27,7 +26,7 @@
         public static int AskForNumber(string text)
         {
             Console.Write(text);
-            string userInput = Console.ReadLine();
+            string userInput = Console.ReadLine(); 
             int number = Convert.ToInt32(userInput);
             return number;
         }
@@ -40,17 +39,17 @@
         /// <param name="min">Smallest permissible value</param>
         /// <param name="max">Largest permissible value</param>
         /// <returns>The user input as an integer</returns>
-        public static int AskForNumberInRange(string text, int min, int max)
+        public static int AskForNumber(string text, int min, int max)
         {
-
             int userInput = AskForNumber(text);
             while (userInput < min || userInput > max)
             {
-                userInput = AskForNumber("Your previous input is not  vaild, try again. ");
+                userInput = AskForNumber("Your previous input is not valid, try again.");
             }
             return userInput;
         }
     }
+
     static class Program
     {
         static void Main()
@@ -59,7 +58,7 @@
             const int Max = 10;
             const int PrintOffset = 4;
 
-            int size = ArrayReplicator.AskForNumberInRange("Enter the array size: ", Min, Max);
+            int size = ArrayReplicator.AskForNumber("Enter the array size: ", Min, Max);
             int[] original = new int[size];
 
             // Fill the original array with user specified integers
